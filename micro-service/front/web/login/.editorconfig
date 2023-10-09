@@ -1,0 +1,13 @@
+
+[*.{js,jsx,ts,tsx,vue}] #表示要匹配的文件类型
+
+charset = utf-8 #字符编码格式
+
+indent_style = space #缩进风格，space表示基于空格做缩进
+
+indent_size = 2 #缩进大小，2表示缩进2个单位
+
+insert_final_newline = true #当创建文件时是否自动在文件末尾添加一个新行，true表示自动添加
+
+trim_trailing_whitespace = true #是否自动移除行尾多余空格，true表示自动移除
+

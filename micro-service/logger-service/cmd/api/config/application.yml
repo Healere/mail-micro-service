@@ -1,0 +1,8 @@
+mongo:
+  username: healere
+  password: 961212li
+  mongoURL: mongodb://mongo:27017
+port:
+  webPort: 80 # configure in /project/docker-compose.dockerfile
+  rpcPort: 5001
+  gprcPort: 50001

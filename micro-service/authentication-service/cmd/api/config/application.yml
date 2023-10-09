@@ -1,0 +1,10 @@
+server:
+  port: 8081
+datasource:
+  driverName: postgres
+  host: postgres
+  port: 5432
+  database: users
+  username: healere
+  password: 961212li
+  charset: utf8

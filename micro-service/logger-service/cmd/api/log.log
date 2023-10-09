@@ -1,0 +1,43 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+[GIN-debug] POST   /api/log                  --> log-service/cmd/api/controller.WriteLog (4 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8081
+2023/09/29 12:30:23 Starting service on port 8081
+xixi
+haha
+request is:  { }
+[GIN] 2023/09/29 - 12:30:44 | 500 |     311.942µs |      172.26.0.1 | POST     "/api/log"
+2023/09/29 12:30:44 [Recovery] 2023/09/29 - 12:30:44 panic recovered:
+POST /api/log HTTP/1.1
+Host: localhost:8081
+␂
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 287
+Content-Type: multipart/form-data; boundary=--------------------------823692761644249146975811
+Postman-Token: f8e9bc38-c9e7-44bc-b8e0-209e59fd5fa6
+User-Agent: PostmanRuntime/7.33.0
+runtime error: invalid memory address or nil pointer dereference
+/usr/local/go/src/runtime/panic.go:261 (0x44bfd7)
+/usr/local/go/src/runtime/signal_unix.go:861 (0x44bfa5)
+/home/healere/project/go/src/pkg/mod/go.mongodb.org/mongo-driver@v1.12.1/mongo/database.go:49 (0x85cffa)
+/home/healere/project/go/src/pkg/mod/go.mongodb.org/mongo-driver@v1.12.1/mongo/client.go:649 (0x86133b)
+/home/healere/project/go/src/micro-service/logger-service/cmd/api/model/model.go:37 (0x86131d)
+/home/healere/project/go/src/micro-service/logger-service/cmd/api/controller/rpcHandler.go:34 (0x928b64)
+/home/healere/project/go/src/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174 (0x91da8a)
+/home/healere/project/go/src/micro-service/logger-service/cmd/api/middleware/CORSMiddleware.go:21 (0x928f6e)
+/home/healere/project/go/src/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174 (0x922d19)
+/home/healere/project/go/src/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102 (0x922d07)
+/home/healere/project/go/src/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174 (0x921ebd)
+/home/healere/project/go/src/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240 (0x921e8c)
+/home/healere/project/go/src/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174 (0x920f7a)
+/home/healere/project/go/src/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620 (0x920c0d)
+/home/healere/project/go/src/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576 (0x9208bc)
+/usr/local/go/src/net/http/server.go:2938 (0x68edad)
+/usr/local/go/src/net/http/server.go:2009 (0x68baf3)
+/usr/local/go/src/runtime/asm_amd64.s:1650 (0x467ae0)

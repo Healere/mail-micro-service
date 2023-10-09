@@ -1,0 +1,10 @@
+
+ports:
+  webPort: 8025
+database:
+  username: root
+  password: 961212li
+  host: 106.55.228.73
+  port: 3306
+  dbname: postfix
+  charset: utf8
